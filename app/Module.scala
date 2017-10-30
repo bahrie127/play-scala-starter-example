@@ -1,6 +1,7 @@
 import com.google.inject.AbstractModule
 import java.time.Clock
 
+import com.typesafe.config.ConfigFactory
 import services.{ApplicationTimer, AtomicCounter, Counter}
 
 /**

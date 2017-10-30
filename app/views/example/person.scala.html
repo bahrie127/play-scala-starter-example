@@ -1,0 +1,18 @@
+@(persons: List[Person], title:String="Play Scala")
+
+
+        @displayProduct(p: Person) = {
+            <li class="list-group-item">@p.name, address: @p.address</li>
+        }
+
+        <ul class="list-group">
+            @for(p <- persons){
+                @*<li>@p.name (@p.price)</li>*@
+                @displayProduct(p)
+            }
+        </ul>
+        @if(persons.isEmpty){
+            <h1 class="alert-danger">Nothing to display</h1>
+        }else{
+            <h1 class="alert-success">@persons.size products</h1>
+        }
